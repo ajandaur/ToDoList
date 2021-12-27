@@ -24,20 +24,37 @@ struct AddTaskView: View {
             
             TextField("Enter your task here", text: $title)
                 .textFieldStyle(.roundedBorder)
+                .background(Color(UIColor.secondarySystemBackground))
             
-            Button {
-                if textIsValid() {
-                    realmManager.addTask(taskTitle: title)
+            
+            HStack {
+                Button {
+                    if textIsValid() {
+                        realmManager.addTask(taskTitle: title)
+                    }
+                    dismissSheet()
+                } label: {
+                    // label
+                    Text("Add task")
+                        .foregroundColor(.white)
+                        .padding()
+                        .padding(.horizontal)
+                        .background(Color.purple)
+                        .cornerRadius(30)
                 }
-                dismissSheet()
-            } label: {
-                // label
-                Text("Add task")
-                    .foregroundColor(.white)
-                    .padding()
-                    .padding(.horizontal)
-                    .background(Color.purple)
-                    .cornerRadius(30)
+                
+                Button {
+                    dismissSheet()
+                } label: {
+                    // label
+                    Text("Return to List")
+                        .foregroundColor(.white)
+                        .padding()
+                        .padding(.horizontal)
+                        .background(Color.purple)
+                        .cornerRadius(30)
+                }
+                
             }
             
             Spacer()
@@ -61,7 +78,7 @@ struct AddTaskView: View {
     func getAlert() -> Alert {
         return Alert(title: Text(alertTitle))
     }
-      
+    
 }
 
 struct AddTaskView_Previews: PreviewProvider {

@@ -16,6 +16,7 @@
 		87283EB727764DB000ECAEBC /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87283EB627764DB000ECAEBC /* AddTaskView.swift */; };
 		87283EB927764EDD00ECAEBC /* SmallAddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87283EB827764EDD00ECAEBC /* SmallAddButton.swift */; };
 		877E1013277A4CFF00306513 /* NoTasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877E1012277A4CFF00306513 /* NoTasksView.swift */; };
+		877E1017277A60F500306513 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 877E1016277A60F500306513 /* LaunchScreen.storyboard */; };
 		87CBBC402777A1EB007C54AA /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 87CBBC3F2777A1EB007C54AA /* Realm */; };
 		87CBBC422777A1EB007C54AA /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 87CBBC412777A1EB007C54AA /* RealmSwift */; };
 		87CBBC452777A77A007C54AA /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CBBC442777A77A007C54AA /* RealmManager.swift */; };
@@ -33,6 +34,7 @@
 		87283EB627764DB000ECAEBC /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
 		87283EB827764EDD00ECAEBC /* SmallAddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallAddButton.swift; sourceTree = "<group>"; };
 		877E1012277A4CFF00306513 /* NoTasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoTasksView.swift; sourceTree = SOURCE_ROOT; };
+		877E1016277A60F500306513 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		87CBBC442777A77A007C54AA /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		87CBBC462777A9E7007C54AA /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,6 +71,7 @@
 		87283EA127764BF700ECAEBC /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
+				877E1016277A60F500306513 /* LaunchScreen.storyboard */,
 				87283EB327764CCA00ECAEBC /* Components */,
 				87283EB227764C0600ECAEBC /* Views */,
 				87283EA227764BF700ECAEBC /* ToDoListApp.swift */,
@@ -173,6 +176,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				877E1017277A60F500306513 /* LaunchScreen.storyboard in Resources */,
 				87283EAA27764BF700ECAEBC /* Preview Assets.xcassets in Resources */,
 				87283EA727764BF700ECAEBC /* Assets.xcassets in Resources */,
 			);
@@ -321,6 +325,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ToDoList/Preview Content\"";
@@ -330,6 +335,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -338,7 +344,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = jandaur.anmol.ToDoList;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ToDoList;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -350,6 +356,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ToDoList/Preview Content\"";
@@ -359,6 +366,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -367,7 +375,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = jandaur.anmol.ToDoList;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ToDoList;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

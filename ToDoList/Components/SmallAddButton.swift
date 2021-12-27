@@ -11,7 +11,7 @@ struct SmallAddButton: View {
     var body: some View {
         ZStack {
             Circle()
-                .frame(width: 50)
+                .frame(width: 100, height: 100)
                 .foregroundColor(Color.purple)
             
             Text("+")
@@ -19,7 +19,7 @@ struct SmallAddButton: View {
                 .fontWeight(.heavy)
                 .foregroundColor(.white)
         }
-        .frame(height: 50)
+        .frame(height: 100)
     }
       
 }
