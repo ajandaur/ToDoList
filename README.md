@@ -8,4 +8,4 @@ Simple To-do list application that implements CRUD using Realm Database
 - Realm Database
 
 ## Demo
-![Dice Roll Demo](ToDoList/Demo/demo.gif)
+![Dice Roll Demo](Demo/demo.gif)
