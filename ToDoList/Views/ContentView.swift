@@ -13,8 +13,15 @@ struct ContentView: View {
     
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
-            TaskView()
-                .environmentObject(realmManager)
+            if !realmManager.tasks.isEmpty {
+                TaskView()
+                    .environmentObject(realmManager)
+            } else {
+                    NoTasksView()
+                    .transition(AnyTransition.opacity
+                                    .animation(.easeIn))
+
+            }
             
             SmallAddButton()
                 .padding()

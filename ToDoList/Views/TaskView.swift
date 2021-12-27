@@ -17,36 +17,39 @@ struct TaskView: View {
                 .padding()
                 .frame(maxWidth: .infinity, alignment: .leading)
             
-            List {
-                // iterate through task array
-                ForEach(realmManager.tasks, id: \.id) {
-                    task in
-                    if !task.isInvalidated {
-                        TaskRow(task: task.title, isComplete: task.completed)
-                            .onTapGesture {
-                                withAnimation(.linear) {
-                                    realmManager.updateTask(id: task.id, completed: !task.completed)
-                                }
-                            }
-                            .swipeActions(edge: .trailing) {
-                                withAnimation(.linear) {
-                                    Button(role: .destructive) {
-                                        realmManager.deleteTask(id: task.id)
-                                    } label: {
-                                        Label("Delete", systemImage: "trash")
+ 
+                List {
+                    // iterate through task array
+                    ForEach(realmManager.tasks, id: \.id) {
+                        task in
+                        if !task.isInvalidated {
+                            TaskRow(task: task.title, isComplete: task.completed)
+                                .onTapGesture {
+                                    withAnimation(.linear) {
+                                        realmManager.updateTask(id: task.id, completed: !task.completed)
                                     }
                                 }
-                                
-                            }
+                                .swipeActions(edge: .trailing) {
+                                    withAnimation(.linear) {
+                                        Button(role: .destructive) {
+                                            realmManager.deleteTask(id: task.id)
+                                        } label: {
+                                            Label("Delete", systemImage: "trash")
+                                        }
+                                    }
+                                    
+                                }
+                        }
                     }
+                    .listRowSeparator(.hidden)
                     
                 }
-                .listRowSeparator(.hidden)
-            }
-            .onAppear {
-                UITableView.appearance().backgroundColor = UIColor.clear
-                UITableViewCell.appearance().backgroundColor = UIColor.clear
-            }
+                .onAppear {
+                    UITableView.appearance().backgroundColor = UIColor.clear
+                    UITableViewCell.appearance().backgroundColor = UIColor.clear
+                }
+           
+           
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color(hue: 1.086, saturation: 0.2141, brightness: 0.9))

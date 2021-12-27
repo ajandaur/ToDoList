@@ -15,6 +15,7 @@
 		87283EB527764CD500ECAEBC /* TaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87283EB427764CD500ECAEBC /* TaskRow.swift */; };
 		87283EB727764DB000ECAEBC /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87283EB627764DB000ECAEBC /* AddTaskView.swift */; };
 		87283EB927764EDD00ECAEBC /* SmallAddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87283EB827764EDD00ECAEBC /* SmallAddButton.swift */; };
+		877E1013277A4CFF00306513 /* NoTasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877E1012277A4CFF00306513 /* NoTasksView.swift */; };
 		87CBBC402777A1EB007C54AA /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 87CBBC3F2777A1EB007C54AA /* Realm */; };
 		87CBBC422777A1EB007C54AA /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 87CBBC412777A1EB007C54AA /* RealmSwift */; };
 		87CBBC452777A77A007C54AA /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CBBC442777A77A007C54AA /* RealmManager.swift */; };
@@ -31,6 +32,7 @@
 		87283EB427764CD500ECAEBC /* TaskRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRow.swift; sourceTree = "<group>"; };
 		87283EB627764DB000ECAEBC /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
 		87283EB827764EDD00ECAEBC /* SmallAddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallAddButton.swift; sourceTree = "<group>"; };
+		877E1012277A4CFF00306513 /* NoTasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoTasksView.swift; sourceTree = SOURCE_ROOT; };
 		87CBBC442777A77A007C54AA /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		87CBBC462777A9E7007C54AA /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,7 +69,6 @@
 		87283EA127764BF700ECAEBC /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
-				87CBBC432777A763007C54AA /* New Group */,
 				87283EB327764CCA00ECAEBC /* Components */,
 				87283EB227764C0600ECAEBC /* Views */,
 				87283EA227764BF700ECAEBC /* ToDoListApp.swift */,
@@ -90,6 +91,7 @@
 		87283EB227764C0600ECAEBC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				877E1012277A4CFF00306513 /* NoTasksView.swift */,
 				87283EA427764BF700ECAEBC /* ContentView.swift */,
 				87283EB027764BFF00ECAEBC /* TaskView.swift */,
 				87283EB627764DB000ECAEBC /* AddTaskView.swift */,
@@ -104,13 +106,6 @@
 				87283EB827764EDD00ECAEBC /* SmallAddButton.swift */,
 			);
 			path = Components;
-			sourceTree = "<group>";
-		};
-		87CBBC432777A763007C54AA /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +190,7 @@
 				87283EB727764DB000ECAEBC /* AddTaskView.swift in Sources */,
 				87283EA527764BF700ECAEBC /* ContentView.swift in Sources */,
 				87283EB927764EDD00ECAEBC /* SmallAddButton.swift in Sources */,
+				877E1013277A4CFF00306513 /* NoTasksView.swift in Sources */,
 				87283EA327764BF700ECAEBC /* ToDoListApp.swift in Sources */,
 				87CBBC452777A77A007C54AA /* RealmManager.swift in Sources */,
 				87283EB527764CD500ECAEBC /* TaskRow.swift in Sources */,
