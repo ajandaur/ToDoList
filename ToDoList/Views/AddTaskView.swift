@@ -13,6 +13,9 @@ struct AddTaskView: View {
     
     @State private var title: String = ""
     
+    @State var alertTitle:  String = ""
+    @State var showAlert: Bool = false
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             Text("Create a new task")
@@ -23,7 +26,7 @@ struct AddTaskView: View {
                 .textFieldStyle(.roundedBorder)
             
             Button {
-                if title != "" {
+                if textIsValid() {
                     realmManager.addTask(taskTitle: title)
                 }
                 dismissSheet()
@@ -42,6 +45,21 @@ struct AddTaskView: View {
         .padding(.top, 40)
         .padding(.horizontal)
         .background(Color(hue: 1.086, saturation: 0.2141, brightness: 0.9))
+        
+        .alert(isPresented: $showAlert, content: getAlert)
+    }
+    
+    func textIsValid() -> Bool {
+        if title.count < 3 {
+            alertTitle = "Your task must be at least 3 characters long!"
+            showAlert.toggle()
+            return false
+        }
+        return true
+    }
+    
+    func getAlert() -> Alert {
+        return Alert(title: Text(alertTitle))
     }
       
 }

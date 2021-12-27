@@ -24,14 +24,19 @@ struct TaskView: View {
                     if !task.isInvalidated {
                         TaskRow(task: task.title, isComplete: task.completed)
                             .onTapGesture {
-                                realmManager.updateTask(id: task.id, completed: !task.completed)
+                                withAnimation(.linear) {
+                                    realmManager.updateTask(id: task.id, completed: !task.completed)
+                                }
                             }
                             .swipeActions(edge: .trailing) {
-                                Button(role: .destructive) {
-                                    realmManager.deleteTask(id: task.id)
-                                } label: {
-                                    Label("Delete", systemImage: "trash")
+                                withAnimation(.linear) {
+                                    Button(role: .destructive) {
+                                        realmManager.deleteTask(id: task.id)
+                                    } label: {
+                                        Label("Delete", systemImage: "trash")
+                                    }
                                 }
+                                
                             }
                     }
                     
