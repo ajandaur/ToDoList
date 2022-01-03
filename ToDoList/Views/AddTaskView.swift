@@ -12,6 +12,7 @@ struct AddTaskView: View {
     @Environment(\.dismiss) var dismissSheet
     
     @State private var title: String = ""
+    @State private var notes: String = ""
     
     @State var alertTitle:  String = ""
     @State var showAlert: Bool = false
@@ -23,6 +24,10 @@ struct AddTaskView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
             
             TextField("Enter your task here", text: $title)
+                .textFieldStyle(.roundedBorder)
+                .background(Color(UIColor.secondarySystemBackground))
+            
+            TextField("Enter notes about task", text: $notes)
                 .textFieldStyle(.roundedBorder)
                 .background(Color(UIColor.secondarySystemBackground))
             

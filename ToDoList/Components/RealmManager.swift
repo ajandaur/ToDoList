@@ -14,7 +14,7 @@ class RealmManager: ObservableObject {
     
     init() {
         openRealm()
-
+        
     }
     
     func openRealm() {
@@ -31,11 +31,11 @@ class RealmManager: ObservableObject {
         }
     }
     
-    func addTask(taskTitle: String) {
+    func addTask(taskTitle: String, taskNotes: String) {
         if let localRealm = localRealm {
             do {
                 try localRealm.write {
-                    let newTask = Task(value: ["title": taskTitle, "completed": false])
+                    let newTask = Task(value: ["title": taskTitle, "completed": false, "note": taskNotes])
                     localRealm.add(newTask)
                     getTasks()
                     print("Added new task to Realm: \(newTask)")
@@ -73,20 +73,39 @@ class RealmManager: ObservableObject {
         }
     }
     
-    func deleteTask(id: ObjectId) {
-        if let localRealm = localRealm {
-            do {
-                let tasktoDelete = localRealm.objects(Task.self).filter(NSPredicate(format: "id == %@", id))
-                guard !tasktoDelete.isEmpty else { return }
-                
-                try localRealm.write {
-                    localRealm.delete(tasktoDelete)
-                    getTasks()
-                    print("Deleted task with id \(id)")
+//    func updateNotes(id: ObjectId, taskTitle: String, taskNotes: String, completed: Bool) {
+//        
+//        if let localRealm = localRealm {
+//            do {
+//                let taskToUpdate = localRealm.objects(Task.self).filter(NSPredicate(format: "id == %@", id))
+//                guard !taskToUpdate.isEmpty else { return }
+//                
+//                try localRealm.write {
+//                    taskToUpdate[0].note = taskNotes
+//                    getTasks()
+//                    print("Updated task with id \(id)! task note now says \(taskNotes)")
+//                }
+//                    
+//                } catch {
+//                    print("Error updating task \(id)'s notes section")
+//                }
+//            }
+//        }
+        
+        func deleteTask(id: ObjectId) {
+            if let localRealm = localRealm {
+                do {
+                    let tasktoDelete = localRealm.objects(Task.self).filter(NSPredicate(format: "id == %@", id))
+                    guard !tasktoDelete.isEmpty else { return }
+                    
+                    try localRealm.write {
+                        localRealm.delete(tasktoDelete)
+                        getTasks()
+                        print("Deleted task with id \(id)")
+                    }
+                } catch {
+                    print("Error deleting task \(id) to Realm: \(error)")
                 }
-            } catch {
-                print("Error deleting task \(id) to Realm: \(error)")
             }
         }
     }
-}

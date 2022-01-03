@@ -35,8 +35,8 @@
 		87283EB827764EDD00ECAEBC /* SmallAddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallAddButton.swift; sourceTree = "<group>"; };
 		877E1012277A4CFF00306513 /* NoTasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoTasksView.swift; sourceTree = SOURCE_ROOT; };
 		877E1016277A60F500306513 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		87CBBC442777A77A007C54AA /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
-		87CBBC462777A9E7007C54AA /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		87CBBC442777A77A007C54AA /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RealmManager.swift; path = ../RealmManager.swift; sourceTree = "<group>"; };
+		87CBBC462777A9E7007C54AA /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Task.swift; path = ../Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +77,6 @@
 				87283EA227764BF700ECAEBC /* ToDoListApp.swift */,
 				87283EA627764BF700ECAEBC /* Assets.xcassets */,
 				87283EA827764BF700ECAEBC /* Preview Content */,
-				87CBBC442777A77A007C54AA /* RealmManager.swift */,
-				87CBBC462777A9E7007C54AA /* Task.swift */,
 			);
 			path = ToDoList;
 			sourceTree = "<group>";
@@ -105,6 +103,8 @@
 		87283EB327764CCA00ECAEBC /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				87CBBC462777A9E7007C54AA /* Task.swift */,
+				87CBBC442777A77A007C54AA /* RealmManager.swift */,
 				87283EB427764CD500ECAEBC /* TaskRow.swift */,
 				87283EB827764EDD00ECAEBC /* SmallAddButton.swift */,
 			);
